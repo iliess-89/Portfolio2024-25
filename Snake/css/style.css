@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.back>figure>img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+.front{
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background-color: white;
+
+    /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.ecran {
+    text-align: center;
+    width: 40%;
+}
+
+.content-card {
+    width: 60%;
+    text-align: center;
+}
+
+.content-card p{
+    text-align: start;
+    color: black;
+    text-shadow: black 1px 0 10px;
+}
+
+canvas {
+    /* border: solid 2px; */
+    background-color: black;
+}
+
+
+
+.suivant {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    z-index: 12;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.suivant>a {
+    height: 50px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.suivant>a {
+    text-decoration: none;
+}
+
+.suivant>a>p {
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+}
+
+.suivant>figure {
+    border: none;
+}
+
+.suivant figure>img {
+    width: 30px;
+    filter: contrast(200%);
+}
+
+.precedent {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 12;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.precedent>a {
+    height: 50px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.precedent>a{
+    text-decoration: none;
+}
+
+.precedent>a>p {
+    color: black;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+}
+
+.precedent>figure {
+    border: none;
+}
+
+.precedent figure>img {
+    width: 30px;
+    transform: rotate(180deg);
+    filter: contrast(200%);
+}
+
+.texte {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+}

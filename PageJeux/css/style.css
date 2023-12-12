@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.back>figure>img{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+.signature {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    right: 0px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: #efb224;
+}
+
+.front{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: block;
+}
+
+.front_two {
+    position: absolute;
+    width: 100%;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.projet {
+    width: 155px;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.projet>h1{
+    width: 100%;
+}
+
+.projet>figure>img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card>p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.card>figure{
+    width: 355px;
+    margin: auto;
+}
+
+.card>figure>img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.content-card {
+    display: flex;
+    overflow-x: scroll;
+    gap: 40px;
+}
+
+.box {
+    color: #efb224;
+    font-weight: bolder;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 2s;
+}
+
+.text-box {
+    margin-bottom: 32px;
+}
+
+.box>figure>a>img{
+    width: 80px;
+    border-radius: 100%;
+    border: solid 5px #4c276d;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    border-radius: 100px;
+    transition: all .2s;
+    position:relative;
+    font-family: sans-serif;
+    font-weight: bolder; 
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #4c276d;
+    color: #efb224;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #efb224;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+} 
+
+.audio {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 12;    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.audio>p {
+    display: none;
+}
+
+button{
+    border-radius: 100%;
+    background-color: #1481f2;
+    border: none;
+    padding: 10px;
+}
+
+button>img{
+    width: 40px;
+}
+
+
+@media only screen and (min-width: 720px) {
+
+    .projet {
+        width: 225px;
+        margin: auto;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .card>figure {
+        width: 555px;
+    }
+
+    .btn:link,
+        .btn:visited {
+        padding: 15px 40px;
+    }
+
+    .content-card {
+        overflow: none;
+        justify-content: center;
+    }
+
+    .box>figure>a>img {
+        width: 100px;
+    }
+
+    .audio>p {
+        color: #1481f2;
+        font-size: 1.3rem;
+        font-weight: bolder;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .box>figure>a>img:hover {
+        border: dashed 5px #efb224;
+        color: #efb224;
+    }
+
+    .box>p {
+        display: none;
+    } 
+        
+    .content-card>.box:hover>p {
+        display: block;
+        position: none;
+    }
+    
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .audio>p{
+        display: block;
+    }
+
+    .play>.icon2 {
+        display: none;
+    }
+    
+    .pause>.icon1 {
+        display: none;
+    }
+
+    .signature{
+        right: 20px;
+        bottom: 20px;
+    }
+}
