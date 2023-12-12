@@ -1,6 +1,5 @@
 var perso = document.querySelector(".perso");
 var obstacles = document.querySelector(".obstacles");
-var canvas = document.getElementById("canvas");
 
 ///creer une function recuperer les codeKey (Espace / left / right)
 
@@ -32,10 +31,20 @@ function deplacement(event) {
   if (event.code === "ArrowRight") {
     nbrC++;
     perso.style.left = nbrC * vitesse + "px";
+
+    setTimeout(function () {
+      perso.classList.remove("rotate");
+    }, 500); 
+    
   } else {
     --nbrC;
     perso.style.left = nbrC * vitesse + "px";
+    
+    if (perso.classList != "rotate") {
+      perso.classList.add("rotate");
+    }
   }
+
 
   if (nbrC >= 0 && nbrC <= 19) {
     console.log("Greta");
@@ -60,6 +69,6 @@ var verification = setInterval(function () {
 
   if (obstaclesLeft < 20 && obstaclesLeft > 0 && persoTop >= 130) {
     obstacles.style.animation = "none";
-    // alert("Vous avez perdu")
+    alert("Vous avez perdu")
   }
 }, 1);

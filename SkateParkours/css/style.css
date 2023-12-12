@@ -7,40 +7,41 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #18f;
-    flex-direction: column;
-    width: 1400px;
+    overflow: hidden;
+    object-fit: cover;
 }
 
-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.back>figure>img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* display: block; */
 }
 
 .jeu {
-    width: 1100px;
-    height: 200px;
-    border: 1px solid #000;
-    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    bottom: 200px;
+    border: 5px solid red;
     border: 0;
-    border-bottom: 1px solid #18f;
+    border-bottom: 5px solid black;
+    display: flex;
+    align-items: baseline;
 }
 
 .perso {
-    width: 25px;
-    height: 50px;
     position: relative;
-    top: 150px;
+    width: 85px;
+    height: 250px;
+    bottom: 0px;
+    left: 10px;
+    transform: rotateY(-180deg);
+}
+
+.rotate.perso{
+    transform: rotateY(0deg);
 }
 
 .animation {
@@ -50,22 +51,22 @@ section {
 /*Animation personnage saute*/
 @keyframes perso-saut {
     0% {
-        top: 130px;
+        top: 0px;
     }
 
     25% {
-        top: 80px;
+        top: -80px;
     }
 
     50% {
-        top: 80px;
+        top: -80px;
     }
 
     100% {
-        top: 130px;
+        top: -100px;
     }
 }
-
+  
 
 
 .perso img {
@@ -75,13 +76,13 @@ section {
 }
 
 .obstacles {
-    width: 20px;
-    height: 20px;
-    background-color: #333;
     position: relative;
-    top: 130px;
+    background-color: #4a4a4a;
+    width: 60px;
+    height: 60px;
+    top: 130;
     left: 98%;
-    border-radius: 50%;
+    border-radius: 80%;
     animation: anime-obstacles 2.5s infinite;
 
 }
@@ -90,30 +91,11 @@ section {
 
 @keyframes anime-obstacles {
     0% {
-        left: 100%;
+        left: 95%;
     }
 
     100% {
-        left: -40px;
+        left: -40%;
     }
 
-}
-
-.control {
-    margin-top: 20px;
-    text-align: center;
-}
-
-a,
-button {
-    padding: 10px 50px;
-    border-radius: 4px;
-    border: 0;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    cursor: pointer;
-    background-color: #fff;
-    font-size: 15px;
-    text-decoration: 0;
-    color: #000;
 }
