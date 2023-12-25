@@ -22,7 +22,9 @@ body {
 
 .jeu {
     position: absolute;
+    /* background-color: red; */
     width: 100%;
+    height: 350px;
     bottom: 200px;
     border: 5px solid red;
     border: 0;
@@ -32,9 +34,9 @@ body {
 }
 
 .perso {
-    position: relative;
+    position: absolute;
     width: 85px;
-    height: 250px;
+    height: 233px;
     bottom: 0px;
     left: 10px;
     transform: rotateY(-180deg);
@@ -49,26 +51,26 @@ body {
 }
 
 /*Animation personnage saute*/
+
 @keyframes perso-saut {
     0% {
         top: 0px;
     }
 
     25% {
-        top: -80px;
+        top: 10px;
     }
 
     50% {
-        top: -80px;
+        top: 10px;
     }
 
     100% {
-        top: -100px;
+        top: 20px;
     }
 }
+
   
-
-
 .perso img {
     width: 100%;
     height: 100%;
@@ -76,14 +78,14 @@ body {
 }
 
 .obstacles {
-    position: relative;
+    position: absolute;
     background-color: #4a4a4a;
     width: 60px;
     height: 60px;
-    top: 130;
+    bottom: 0px;
     left: 98%;
     border-radius: 80%;
-    animation: anime-obstacles 2.5s infinite;
+    animation: anime-obstacles 5.5s infinite;
 
 }
 
@@ -98,4 +100,124 @@ body {
         left: -40%;
     }
 
+}
+
+
+/* Modal */
+
+
+.modal,.modal2, .modal3,.modal4{
+    position: absolute;
+    background-color: #3e3e3ecb;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    z-index: 12;
+}
+
+.modal>.box_modal, .modal2>.box_modal, .modal3>.box_modal, .modal4>.box_modal{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    gap: 10px;
+    flex: 40% 0 60%;
+}
+
+.modal>.box_modal>.container_Modal, .modal2>.box_modal>.container_Modal, .modal3>.box_modal>.container_Modal,
+.modal4>.box_modal>.container_Modal{
+    background: rgba(255, 255, 255, 0.486);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.562);
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content>p{
+    padding: 10px;
+}
+
+.container {
+    display: block;
+    height: 600px;
+    width: 100%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.486);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.562);
+    height: 295px;
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.block{
+    display:block;
+    text-align: center;
+}
+
+.block>h2{
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.c2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card>h2{
+    text-align: center;
+}
+
+.card>h2 span {
+    font-size: 3rem;
+}
+
+.container_block{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+    margin-top: 45px;
+}
+
+/* .block1>ul, .block2>ul, .block3>ul, .block4>ul {
+    list-style: none;
+} */
+
+.card>button {
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.modal{
+    display: none;
+}
+
+.modal2 {
+    display: none;
+}
+
+.modal3 {
+    display: none;
+}
+
+.modal4 {
+    display: none;
 }
