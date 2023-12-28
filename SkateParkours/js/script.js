@@ -44,23 +44,28 @@ function deplacement(event) {
       perso.classList.add("rotate");
     }
   } 
+  let modal = document.querySelector(".modal");
+  let modal2 = document.querySelector(".modal2");
+  let modal3 = document.querySelector(".modal3");
+  let modal4 = document.querySelector(".modal4");
 
   if (nbrC >= 10 && nbrC <= 19) {
     console.log("Greta");
-    let modal = document.querySelector(".modal");
     modal.style.display = "block";
   } else if (nbrC >= 20 && nbrC <= 39) {
     console.log("Designer");
-     let modal2 = document.querySelector(".modal2");
      modal2.style.display = "block";
+     modal.style.display = "none";
   } else if (nbrC >= 40 && nbrC <= 49) {
     console.log("CDA");
-     let modal3 = document.querySelector(".modal3");
      modal3.style.display = "block";
+     modal2.style.display = "none";
   } else if (nbrC >= 60 && nbrC <= 79) {
     console.log("KFC");
-     let modal4 = document.querySelector(".modal4");
      modal4.style.display = "block";
+      modal3.style.display = "none";
+  }else {
+    modal4.style.display = "none";
   }
 }
   

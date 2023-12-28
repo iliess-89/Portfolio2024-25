@@ -33,6 +33,7 @@ body {
     border-radius: 16px;
     background-color: #02002a;
     border: solid 0px #fff5ff;
+    overflow: hidden;
 }
 
 .ecran {
@@ -154,20 +155,17 @@ canvas {
 
 canvas{
     position: absolute;
+    width: 61%;
+    height: 61%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 12;
 }
 
-#canvas{
-    width: 350px;
-    height: 350px;
-    
-}
-
 .content-card>figure{
-    width: 700px;
+    width: 80%;
+    margin: auto;
 }
 
 .content-card>figure>img {
@@ -197,4 +195,7 @@ canvas{
     font-family: 'Titan One', sans-serif;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1200px) {
 }
