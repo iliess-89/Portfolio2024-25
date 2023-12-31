@@ -19,21 +19,81 @@ body {
     display: block;
 }
 
+.font_border {
+    position: absolute;
+    height: 78%;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    background-color: #02002a;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.box_font {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: repeating-conic-gradient(from var(--deg), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
+    animation: animate 4s linear infinite;
+    border-radius: 16px;
+}
+
+.box_font::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: repeating-conic-gradient(from var(--deg), #45f3ff 0%, #45f3ff 5%, transparent 5%, transparent 40%, #45f3ff 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 16px;
+
+}
+
+.box_font::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background-color: #02002a;
+    border-radius: 16px;
+    /* border: 8px solid #000000; */
+}
+
+@property --deg {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes animate {
+    0% {
+        --deg: 0deg;
+    }
+
+    100% {
+        --deg: 360deg;
+    }
+}
+
 .front{
     position: absolute;
-    width: 90%;
+    height: 96%;
+    width: 98%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    padding: 15px;
-    border-radius: 16px;
+    gap: 30px;
+    border-radius: 15px;
     background-color: #02002a;
     border: solid 0px #fff5ff;
     overflow: hidden;
+    z-index:12;
 }
 
 .ecran {
