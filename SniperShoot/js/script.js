@@ -12,7 +12,8 @@ btn.onclick = function() {
       //création de la cible
       let target = document.createElement('img');
       target.id = 'target';
-      target.src = 'img/html.png'
+
+      target.src = 'img/dove.png'
       container.appendChild(target);
       target.style.top = Math.random() * (500 - target.offsetHeight) + 'px';
       target.style.left = Math.random() * (600 - target.offsetWidth) + 'px';

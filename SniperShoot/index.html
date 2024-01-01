@@ -3,20 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shooter(Compétence)</title>
+    <title>Shooter(contact)</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="game">
-        <button class="start_btn">start / restart</button>
-        <div class="game_infos">
-            <span class="score">score : 0</span>
-            <span class="time">Temps : 0</span>
+
+        <section class="back">
+            <figure>
+                <img src="img/5073414.jpg" alt="...">
+            </figure>
+        </section>
+
+    <section class="front">
+
+        <div class="head">
+            <div class="title">
+                <h2>WELCOME</h2>
+                <p>&</p>
+                <p>contact me !</p>
+            </div>
+            <p>If you have any questions, suggestions or offers, please don't hesitate to contact me!</p>
         </div>
-        <div class="container">
+
+
+        <div class="box">
             
+            <div class="game">
+                <div class="container">
+                    
+                </div>
+                <div class="game_infos">
+                    <span class="score">score : 0</span>
+                    <span class="time">Temps : 0</span>
+                </div>
+                <button class="start_btn">start / restart</button>
+            </div>
+    
+    
+            <form action="" method="post">
+                <input type="text" name="nom" placeholder=" Veuilliez saisir votre Nom...">
+                <input type="text" name="prenom" placeholder=" Veuilliez saisir votre Prénom...">
+                <input type="email" name="mail" id="mail" placeholder=" Veuilliez saisir votre Email...">
+                <textarea name="message" id="message" cols="30" rows="10"> </textarea>
+                <button>Envoyé</button>
+            </form>
         </div>
-    </div>
+
+
+    </section>
+
 </body>
 </html>
