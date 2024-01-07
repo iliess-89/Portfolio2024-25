@@ -49,23 +49,44 @@ function deplacement(event) {
   let modal3 = document.querySelector(".modal3");
   let modal4 = document.querySelector(".modal4");
 
+  let cardG = document.querySelector(".cardG");
+  let cardL = document.querySelector(".cardL");
+  let cardO = document.querySelector(".cardO");
+  let cardC = document.querySelector(".cardC");
+
   if (nbrC >= 10 && nbrC <= 19) {
     console.log("Greta");
-    modal.style.display = "block";
+    // modal.style.display = "block";
+
+    cardG.style.display = "block";
+    cardO.style.display = "none";
   } else if (nbrC >= 20 && nbrC <= 39) {
     console.log("Designer");
-     modal2.style.display = "block";
-     modal.style.display = "none";
+    //  modal2.style.display = "block";
+    //  modal.style.display = "none";
+
+  cardG.style.display = "none";     
+  cardO.style.display = "block";
+  cardL.style.display = "none";
   } else if (nbrC >= 40 && nbrC <= 49) {
     console.log("CDA");
-     modal3.style.display = "block";
-     modal2.style.display = "none";
+    //  modal3.style.display = "block";
+    //  modal2.style.display = "none";
+    cardL.style.display = "block";
+     cardG.style.display = "none";
+     cardO.style.display = "none";
+     cardC.style.display = "none";
   } else if (nbrC >= 60 && nbrC <= 79) {
-    console.log("KFC");
-     modal4.style.display = "block";
-      modal3.style.display = "none";
+    console.log("Université");
+    //  modal4.style.display = "block";
+    //   modal3.style.display = "none";
+
+    cardC.style.display = "block";
+    cardL.style.display = "none";
+    cardG.style.display = "none";
+    cardO.style.display = "none";
   }else {
-    modal4.style.display = "none";
+    // modal4.style.display = "none";
   }
 }
   

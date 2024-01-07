@@ -25,7 +25,7 @@ body {
     /* background-color: red; */
     width: 100%;
     height: 350px;
-    bottom: 200px;
+    bottom: 5vh;
     border: 5px solid red;
     border: 0;
     border-bottom: 5px solid black;
@@ -226,61 +226,9 @@ body {
 .level{
     position: absolute;
     width: 100%;
-    bottom: 20vh;
+    top: 2vh;
     left: 0;
     display: flex;
-}
-
-.level>div{
-    background-color: #bfb923;
-    font-size: 1rem;
-    color: rgb(0, 6, 130);
-    height: 30px;
-    width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    border: 3px solid rgb(0, 6, 130);
-    font-weight: bold;
-}
-
-.level>div::before{
-    content: "";
-    position: absolute;
-    height: 45px;
-    width: 45px;
-    border-radius: 100%;
-    border: 3px solid rgb(0, 6, 130);
-    font-weight: bold;
-}
-
-.level>.one{
-    position: absolute;
-    top: 0;
-    left: 20%;
-    z-index: 2;
-}
-
-.level>.two {
-    position: absolute;
-    top: 0;
-    left: 40%;
-    z-index: 2;
-}
-
-.level>.three {
-    position: absolute;
-    top: 0;
-    left: 60%;
-    z-index: 2;
-}
-
-.level>.four {
-    position: absolute;
-    top: 0;
-    left: 80%;
-    z-index: 2;
 }
 
 .level>.line {
@@ -292,7 +240,171 @@ body {
     background-color: rgb(0, 6, 130);
     z-index: 1;
 }
-/* 
+
+.level>div>.number{
+    background-color: #231f20;
+    font-size: 1rem;
+    color: white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 3px solid rgb(0, 6, 130);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.level>div>.number::before{
+    content: "";
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    border: 3px solid rgb(0, 6, 130);
+    font-weight: bold;
+}
+
+
+.cardO{
+    background-image: url("/SkateParkours/img/Card-blue.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 283px;
+    position: relative;
+}
+
+.cardL {
+    background-image: url("/SkateParkours/img/Card-violet.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 283px;
+    position: relative;
+}
+
+.cardG {
+    background-image: url("/SkateParkours/img/Card-rose.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 283px;
+    position: relative;
+}
+
+.cardC {
+    background-image: url("/SkateParkours/img/Card-yellow.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 283px;
+    position: relative;
+    text-align: center;
+}
+
+.cardO>.date, .cardL>.date, .cardG>.date, .cardC>.date{
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 44px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7rem;
+}
+
+.cardO>h2, .cardL>h2, .cardG>h2, .cardC>h2 {
+    position: absolute;
+    color: #231f20;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 135px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.cardO>p, .cardG>p, .cardC>p {
+    position: absolute;
+    color: #231f20;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 160px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.cardL>p, .cardG>p {
+    position: absolute;
+    color: #231f20;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.one>div, .two>div, .three>div, .four>div {
+    margin: auto;
+}
+
+.one figure, .two>figure, .three>figure, .four>figure {
+    width: 200px;
+}
+
+.one figure>img, .two>figure>img, .three>figure>img, .four>figure>img {
+    width: 100%;
+    margin-top: 20px ;
+}
+
+.one{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    z-index: 2;
+}
+
+.two {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    z-index: 2;
+}
+
+.three {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    z-index: 2;
+}
+
+.four {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    z-index: 2;
+}
+
+
 .car {
     background-color: rgb(0, 6, 130);
     height: 120px;
@@ -306,4 +418,20 @@ body {
     border: 1px solid #069;
     border-color: transparent transparent #069 #069;
     border-width: 100px; 
-} */
+}
+
+.cardG {
+    display: none;
+}
+
+.cardO {
+    display: none;
+}
+
+.cardL {
+    display: none;
+}
+
+.cardC {
+    display: none;
+}
