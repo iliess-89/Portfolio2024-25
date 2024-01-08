@@ -363,6 +363,72 @@ body {
     font-size: 0.8rem;
 }
 
+.cardG>a, .cardO>a, .cardL>a, .cardC>a {
+    position: absolute;
+    color: #231f20;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* text-align: center; */
+    /* margin: auto; */
+
+    width: 60%;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 30px;
+    font-size: .8rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cardG>a::before, .cardO>a::before, .cardL>a::before, .cardC>a::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    left: -24px;
+}
+
+.cardG>a::after, .cardO>a::after, .cardL>a::after, .cardC>a::after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    right: -25px;
+}
+
+.cardG>a{
+    border: 2px solid #8502af; 
+}
+
+.cardO>a {
+    border: 2px solid #1a32a3;
+}
+
+.cardL>a {
+    border: 2px solid #550d94;
+}
+
+.cardC>a {
+    border: 2px solid #fe5a02;
+}
+
+.cardG>a::after, .cardG>a::before{
+border: 1px solid #8502af;
+}
+
+.cardO>a::after, .cardO>a::before {
+border: 1px solid #1a32a3;
+}
+
+.cardL>a::after, .cardL>a::before{
+    border: 1px solid #550d94;
+}
+
+.cardC>a::after, .cardC>a::before{
+    border: 1px solid #fe5a02;
+}
+
 .one>div, .two>div, .three>div, .four>div {
     margin: auto;
 }
@@ -434,4 +500,47 @@ body {
 
 .cardC {
     display: none;
+}
+
+
+
+.param {
+    position: absolute;
+    background-color: #4a4a4a9d;
+    height: 100vh;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.param-content>figure {
+    width: 700px;
+    position: relative;
+}
+
+.param-content>figure>img{
+    width: 100%;
+}
+
+.param-content>figure>a>img {
+    width: 300px;
+}
+
+.param-content>figure>a>span {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: bolder;
+    z-index: 6;
 }

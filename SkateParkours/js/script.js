@@ -1,6 +1,15 @@
 var perso = document.querySelector(".perso");
 var obstacles = document.querySelector(".obstacles");
 
+var btnPlay = document.querySelector(".play");
+var param = document.querySelector(".param");
+
+btnPlay.addEventListener("click", ()=>{
+  param.style.display = "none";
+})
+
+
+
 ///creer une function recuperer les codeKey (Espace / left / right)
 
 document.addEventListener("keydown", function (event) {
